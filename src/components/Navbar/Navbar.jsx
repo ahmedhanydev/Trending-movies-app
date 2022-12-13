@@ -57,15 +57,15 @@ export default function Navbar({ loginData, logOut }) {
 
             <ul className="navbar-nav list-unstyled my-0 ms-auto mx-3 d-flex auth-links align-items-center ">
               {loginData ? (
-                <h5 className="my-0 mx-3 ">
+                <h5 className="my-0 mx-3  lh-lg">
                   {"Hello  " + loginData.first_name + " " + loginData.last_name}
                 </h5>
               ) : (
                 ""
               )}
-              <div className="social-icon md-ms-auto sm-my-2 d-flex align-items-center  mx-3">
+              <div className="social-icon md-ms-auto mt-sm-2 d-flex align-items-center mx-3">
                 <BsFacebook />
-                <BsSpotify className="mx-3" />
+                <BsSpotify className="mx-3 " />
                 <BsInstagram />
               </div>
 
@@ -83,8 +83,8 @@ export default function Navbar({ loginData, logOut }) {
                   </li>
                 </>
               ) : (
-                <li className="nav-item">
-                  <a className="nav-link" onClick={logOut}>
+                <li className="nav-item lh-lg">
+                  <a className="nav-link " onClick={logOut}>
                     Logout
                   </a>
                 </li>
