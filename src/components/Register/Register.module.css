@@ -1,0 +1,14 @@
+.btnBg {
+  background-color: #5200bd !important;
+  color: #fff !important;
+}
+
+/* .btnHover:hover,
+.btnHover:checked {
+  background-color: #fff;
+  color: #5200bd;
+} */
+.iconStyle {
+  font-size: 25px;
+  color: #fff !important;
+}
