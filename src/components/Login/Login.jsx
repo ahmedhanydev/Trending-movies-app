@@ -59,8 +59,18 @@ export default function Login({ setUserData }) {
         .required(),
       password: joi
         .string()
-        .pattern(new RegExp("^[a-z][0-9]{3,8}$"))
-        .required(),
+        .pattern(
+          new RegExp(
+            "(?=^.{6,}$)((?=.*d)(?=.*[a-z])|(?=.*d)(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*[^A-Za-z0-9])(?=.*[a-z])|(?=.*d)(?=.*[^A-Za-z0-9]))^.*"
+          )
+        )
+        .required()
+        .messages({
+          "string.pattern.base": `"password" should be included minimum 5 characters and one number `,
+          "string.empty": `"password" cannot be an empty field`,
+          "string.min": `"password" should have a minimum length of {#limit}`,
+          "any.required": `"password" is a required field`,
+        }),
     });
 
     return schema.validate(user, { abortEarly: false });
