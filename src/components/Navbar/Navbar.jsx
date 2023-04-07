@@ -23,37 +23,34 @@ export default function Navbar({ loginData, logOut }) {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            {loginData ? (
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
-                <li className="nav-item">
-                  <Link className="nav-link" to="home">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="movies">
-                    Movies
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="tvshows">
-                    Tv Shows
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="people">
-                    People
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="about">
-                    About
-                  </Link>
-                </li>
-              </ul>
-            ) : (
-              ""
-            )}
+            {/* {loginData ? ( */}
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
+              <li className="nav-item">
+                <Link className="nav-link" to="home">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="movies">
+                  Movies
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="tvshows">
+                  Tv Shows
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="people">
+                  People
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="about">
+                  About
+                </Link>
+              </li>
+            </ul>
 
             <ul className="navbar-nav list-unstyled my-0 ms-auto mx-3 d-flex auth-links align-items-center ">
               {loginData ? (

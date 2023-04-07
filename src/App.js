@@ -43,20 +43,19 @@ function App() {
       <div className="container">
         <MediaContextProvider log="log">
           <Routes>
-            <Route element={<ProtectedRoute loginData={loginData} />}>
-              <Route path="/" element={<Home />}></Route>
-              <Route path="/home" element={<Home />}></Route>
-              <Route path="/movies" element={<Movies />}></Route>
-              <Route path="/tvshows" element={<TvShows />}></Route>
-              <Route path="/people" element={<People />}></Route>
-              {/* <Route path="/details" element={<Details />}></Route> */}
-              <Route path="/movieDetails" element={<MovieDetails />}></Route>
-              <Route
-                path="/tvshowsDetails"
-                element={<TvShowsDetails />}
-              ></Route>
-              <Route path="/peopleDetails" element={<PeopleDetails />}></Route>
-            </Route>
+            {/* <Route element={<ProtectedRoute loginData={loginData} />}>
+              
+            </Route> */}
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/home" element={<Home />}></Route>
+            <Route path="/movies" element={<Movies />}></Route>
+            <Route path="/tvshows" element={<TvShows />}></Route>
+            <Route path="/people" element={<People />}></Route>
+            {/* <Route path="/details" element={<Details />}></Route> */}
+            <Route path="/movieDetails" element={<MovieDetails />}></Route>
+            <Route path="/tvshowsDetails" element={<TvShowsDetails />}></Route>
+            <Route path="/peopleDetails" element={<PeopleDetails />}></Route>
+
             <Route path="/about" element={<About />}></Route>
             <Route path="/login" element={<Login setUserData={setUserData} />}>
               {" "}
